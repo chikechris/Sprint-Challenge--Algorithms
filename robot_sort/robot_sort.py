@@ -101,7 +101,7 @@ class SortingRobot:
         #  using while loop to access instance variables
 
         while not self.light_is_on():
-           '''set_light_on() -turns the robot's light on''' 
+        # set_light_on() -turns the robot's light on'
             self.set_light_on()
 
             while self.can_move_right():
