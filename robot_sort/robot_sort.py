@@ -1,3 +1,4 @@
+
 class SortingRobot:
     def __init__(self, l):
         """
@@ -96,9 +97,56 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
 
+        #  using while loop to access instance variables
+
+        while not self.light_is_on():
+           '''set_light_on() -turns the robot's light on''' 
+            self.set_light_on()
+
+            while self.can_move_right():
+
+            #  The robot swaps its currently held item with the list item in front
+            #    of it. in its current position (index) '
+                self.swap_item()
+
+                # move_right() moves the the robot's position one index to the right '
+                self.move_right()
+
+                # ''' compare_item() -compares the item the robot is holding to the item at the current position the robot is currently at on the list if compare_item()returns 1'''
+                if self.compare_item() == 1:
+
+
+                # swap_item() -swaps the position of the list item the robot is holding
+                # with the list item at the robot's current position(index) on the list 
+                    self.swap_item()
+
+                    #  move_left() -moves the robot's position one index to the left
+                    self.move_left()
+
+                # swap_item() -swaps the position of the list item the robot is holding
+                # with the list item at the robot's current position(index) on the list
+                    self.swap_item()
+
+                    # set_light_on() -turns the robot's light off'
+                    self.set_light_off()
+
+                else:
+                    # move_left() -moves the robot's position one index to the left
+                    self.move_left()
+
+                    # swap_item() -swaps the position of the list item the robot is holding with the list item at the robot's current position(index) on the list'
+                    self.swap_item()
+
+                    #  move_right() -moves the robot's position one index to the right
+                    self.move_right()
+
+            while not self.light_is_on() and self.can_move_left():
+                self.move_left() 
+     
+                        
+            
+        # Fill this out
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
@@ -110,3 +158,5 @@ if __name__ == "__main__":
 
     robot.sort()
     print(robot._list)
+
+
