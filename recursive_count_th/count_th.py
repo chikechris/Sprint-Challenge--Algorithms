@@ -4,7 +4,7 @@ Your function should return a count of how many occurences of ***"th"*** occur w
 Your function must utilize recursion. It cannot contain any loops.
 '''
 
-word = "marathonthon"
+word = "algorithmathicthddth"
 
 def count_th(word):
   
