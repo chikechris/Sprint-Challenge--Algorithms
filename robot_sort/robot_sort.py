@@ -145,7 +145,6 @@ class SortingRobot:
             while not self.light_is_on() and self.can_move_left():
                 self.move_left()
 
-
         # Fill this out
 if __name__ == "__main__":
     # Test our your implementation from the command line
