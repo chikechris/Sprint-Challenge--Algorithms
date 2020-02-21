@@ -6,8 +6,9 @@ Your function must utilize recursion. It cannot contain any loops.
 
 word = "algorithmathicthddth"
 
+
 def count_th(word):
-  
+
     # If word is empty, return 0 for false
     if word == '':
         return 0
@@ -21,10 +22,5 @@ def count_th(word):
             # don't return anything and increment 1 index and recursively run the function
             return count_th(word[1:])
 
-print(count_th(word))            
-       
 
-
-    
-    
-    
+print(count_th(word))
